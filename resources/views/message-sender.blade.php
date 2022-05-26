@@ -16,9 +16,13 @@
 
     </head>
     <body>
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
         <div id="form-main">
             <h2 class="heading">Enter your message here</h2>
-            <p>{{ $employees }}</p>
             <div id="form-div">
                 <form class="form" id="form1">
                 
